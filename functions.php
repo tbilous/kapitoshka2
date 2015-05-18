@@ -42,14 +42,21 @@ function kapitoshka2_setup() {
 	//add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'kapitoshka2' ),
-	) );
+//	register_nav_menus( array(
+//		'primary' => esc_html__( 'Primary Menu', 'kapitoshka2' ),
+//	) );
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
+
+    register_nav_menus( array(
+        'primary' => __( 'Меню в шапке', 'kapitoshka2' ),
+        'footer_menu' => __( 'Меню в подвале', 'kapitoshka2' ),
+    ) );
+
+
+    /*
+     * Switch default core markup for search form, comment form, and comments
+     * to output valid HTML5.
+     */
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 	) );
@@ -83,6 +90,12 @@ function kapitoshka2_content_width() {
 }
 add_action( 'after_setup_theme', 'kapitoshka2_content_width', 0 );
 
+add_action( 'after_setup_theme', 'wpt_setup' );
+if ( ! function_exists( 'wpt_setup' ) ):
+    function wpt_setup() {
+        register_nav_menu( 'primary', __( 'Головне', 'kapitoshka2' ) );
+    } endif;
+
 /**
  * Register widget area.
  *
@@ -95,11 +108,24 @@ function kapitoshka2_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'kapitoshka2_widgets_init' );
+
+function kapitoshka2_widgets_init2() {
+    register_sidebar( array(
+        'name'          => esc_html__( 'Social Widget place', 'kapitoshka2' ),
+        'id'            => 'sidebar-2',
+        'description'   => '',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<span>',
+        'after_title'   => '</span>',
+    ) );
+}
+add_action( 'widgets_init', 'kapitoshka2_widgets_init2' );
 
 /**
  * Enqueue scripts and styles.
@@ -134,27 +160,30 @@ register_nav_menus( array(
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+//require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/inc/extras.php';
+//require get_template_directory() . '/inc/extras.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+//require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/inc/jetpack.php';
+//require get_template_directory() . '/inc/jetpack.php';
+
+require_once('lib/wp_bootstrap_navwalker.php');
+
 function my_theme_load_resources() {
     $theme_uri = get_template_directory_uri();
 
 
-      wp_register_style('my_bootstrap_style', $theme_uri.'/assets/css/main.min.css', false, '0.1');
+      wp_register_style('my_bootstrap_style', $theme_uri.'/assets/css/styles.css', false, '0.1');
       wp_enqueue_style('my_bootstrap_style');
 
 
@@ -168,11 +197,11 @@ function my_theme_load_resources() {
     wp_register_script('my_them_plugins_functions', $theme_uri.'/assets/js/plugins.js', array('jquery') );
     wp_enqueue_script('my_them_plugins_functions');
 
-    wp_register_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBuU_0_uLMnFM-2oWod_fzC0atPZj7dHlU&sensor=false');
-    wp_enqueue_script('google-maps');
-
-    wp_register_script('google-jsapi','https://www.google.com/jsapi');
-    wp_enqueue_script('google-jsapi');
+//    wp_register_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBuU_0_uLMnFM-2oWod_fzC0atPZj7dHlU&sensor=false');
+//    wp_enqueue_script('google-maps');
+//
+//    wp_register_script('google-jsapi','https://www.google.com/jsapi');
+//    wp_enqueue_script('google-jsapi');
 
 
 
@@ -186,9 +215,34 @@ function my_theme_load_resources() {
 add_action('wp_enqueue_scripts', 'my_theme_load_resources');
 
 
+//
+//wp_register_script('custom-js',get_stylesheet_directory_uri().'/assets/js/plugins.js',array(),NULL,true);
+//wp_enqueue_script('custom-js');
+//
+//$wnm_custom = array( 'stylesheet_directory_uri' => get_stylesheet_directory_uri() );
+//wp_localize_script( 'custom-js', 'directory_uri', $wnm_custom );
+wp_register_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBuU_0_uLMnFM-2oWod_fzC0atPZj7dHlU&sensor=false');
+wp_enqueue_script('google-maps');
+wp_register_script('google-jsapi','https://www.google.com/jsapi');
+wp_enqueue_script('google-jsapi');
 
-wp_register_script('custom-js',get_stylesheet_directory_uri().'/assets/js/plugins.js',array(),NULL,true);
-wp_enqueue_script('custom-js');
+//wp_register_script('custom-js',get_stylesheet_directory_uri().'/assets/js/plugins.js',array(),NULL,true);
+//wp_enqueue_script('custom-js');
+//
+//$wnm_custom = array( 'stylesheet_directory_uri' => get_stylesheet_directory_uri() );
+//wp_localize_script( 'custom-js', 'directory_uri', $wnm_custom );
 
-$wnm_custom = array( 'stylesheet_directory_uri' => get_stylesheet_directory_uri() );
-wp_localize_script( 'custom-js', 'directory_uri', $wnm_custom );
+function localize_vars() {
+    return array(
+        'stylesheet_directory' => get_stylesheet_directory_uri()
+    );
+}
+
+wp_enqueue_script( 'my_script', get_stylesheet_directory_uri().( '/assets/js/plugins.js' ), array( 'jquery' ) );
+wp_localize_script( 'my_script', 'blabla', localize_vars() );
+
+
+
+
+// Register Custom Navigation Walker
+

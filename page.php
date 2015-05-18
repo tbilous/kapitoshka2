@@ -12,9 +12,9 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+<div class="middle row">
+    <div id="primary" class="col-md-10 col-sm-12 content-area">
 		<main id="main" class="site-main" role="main">
-<h1>page.php</h1>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
@@ -28,8 +28,16 @@ get_header(); ?>
 
 			<?php endwhile; // end of the loop. ?>
 
+        <div id="social" class="widget-area" role="complementary">
+            <?php dynamic_sidebar( 'sidebar-2' ); ?>
+        </div>
+
+            </article><!-- #post-## -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
+
+</div> <!--/row-->
+
 <?php get_footer(); ?>

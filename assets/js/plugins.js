@@ -25,11 +25,11 @@
 
 
 // Карта Google с кастомным маркером
-//alert(directory_uri.stylesheet_directory_uri);
-var th_path = directory_uri.stylesheet_directory_uri;
-//alert(th_path);
-th_path2 = th_path+'/assets/img/map_point.png'
-//alert(th_path2);
+var templateUrl = blabla.stylesheet_directory;
+
+var point = templateUrl+'/assets/img/map_point.png';
+
+
 function initialize() {
     var latlng = new google.maps.LatLng(48.268077, 25.942986);
     var settings = {
@@ -38,11 +38,11 @@ function initialize() {
         disableDefaultUI: true,
         mapTypeId: google.maps.MapTypeId.ROADMAP};
     var map = new google.maps.Map(document.getElementById("map"), settings);
-    var companyImage = new google.maps.MarkerImage(th_path2,
+    var companyImage = new google.maps.MarkerImage(templateUrl+'/assets/img/map_point.png',
         new google.maps.Size(100,50),
         new google.maps.Point(0,0),
         new google.maps.Point(50,50));
-    var companyShadow = new google.maps.MarkerImage('img/map_shadowt.png',
+    var companyShadow = new google.maps.MarkerImage(templateUrl+'/assets/img/shadow.png',
         new google.maps.Size(130,50),
         new google.maps.Point(0,0),
         new google.maps.Point(65, 50));

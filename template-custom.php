@@ -3,37 +3,15 @@
 Template Name: Custom Template with slider
 */
 ?>
+
 <?php
 //do_action('get_header');
-get_template_part('template-parts/heads');
-//?>
+//get_template_part('template-parts/heads');
+get_header();?>
 
 
-<header class="banner" role="banner">
-    <div class="container">
-        <!--   <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>    -->
-        <div class="logo">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.png" class="img-responsive" alt="logo">
-        </div>
 
-        <nav class="navbar navbar-default" role="navigation">
-            <?php
-            if (has_nav_menu('primary_navigation')) :
-                wp_nav_menu(array('theme_location' => 'primary_navigation', 'walker' => new Roots_Nav_Walker(), 'menu_class' => 'nav navbar-nav'));
-            endif;
-            ?>
-        </nav>
-    </div>
-</header>
-
-<div class="wrapper container">
+<!--<div class="wrapper container">-->
     <div class="row">
         <div class="top">
             <div class="col-md-2 col-sm-12 left-banners">
@@ -102,17 +80,19 @@ get_template_part('template-parts/heads');
 
 
                     <div class="social"></div>
-
+                    <div id="social" class="widget-area" role="complementary">
+                        <?php dynamic_sidebar( 'sidebar-2' ); ?>
+                    </div>
                 </main>
             </div>
             <div class="col-md-2 col-sm-12 sidebar">
 
-                <aside class="sidebar" role="complementary">
-                    <a href="javascript:void(0)"><img src="<?php bloginfo('template_directory'); ?>/assets/img/offer.jpg" alt="offer" width="135px"> </a>
-                    <a href="javascript:void(0)"><img src="<?php bloginfo('template_directory'); ?>/assets/img/partner.jpg" alt="partner" width="135px"> </a>
-                    <a href="javascript:void(0)"><img src="<?php bloginfo('template_directory'); ?>/assets/img/press.jpg" alt="press" width="135px"> </a>
+            <aside class="sidebar" role="complementary">
+            <a href="javascript:void(0)"><img src="<?php bloginfo('template_directory'); ?>/assets/img/offer.jpg" alt="offer" width="135px"> </a>
+            <a href="javascript:void(0)"><img src="<?php bloginfo('template_directory'); ?>/assets/img/partner.jpg" alt="partner" width="135px"> </a>
+            <a href="javascript:void(0)"><img src="<?php bloginfo('template_directory'); ?>/assets/img/press.jpg" alt="press" width="135px"> </a>
 
-                </aside>
+            </aside>
 
 
             </div>
@@ -121,7 +101,7 @@ get_template_part('template-parts/heads');
 </div>  <!--wrapper-->
 
 
-<?php get_template_part('templates/footer'); ?>
+<?php //get_template_part('templates/footer'); ?>
 
 
 <!--<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>      -->

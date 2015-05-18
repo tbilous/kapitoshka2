@@ -7,10 +7,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <h1>CONTENT-PAGE.php</h1>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+<!--    <h1>CONTENT-PAGE.php</h1>-->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
@@ -25,4 +22,4 @@
 	<footer class="entry-footer">
 		<?php edit_post_link( esc_html__( 'Edit', 'kapitoshka2' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+

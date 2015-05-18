@@ -12,8 +12,13 @@
  */
 
 get_header(); ?>
-<h1>TEST</h1>
-	<div id="primary" class="content-area">
+
+<!--<div class="wrapper container">-->
+
+<div class="middle row">
+
+    <div id="primary" class="col-md-10 col-sm-12 content-area">
+
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -40,7 +45,14 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+        </div>
+
+
+    <div class="col-md-2 col-sm-12 sidebar">
+        <?php get_sidebar(); ?>
+    </div>
+
+</div> <!--/row-->
+
 <?php get_footer(); ?>

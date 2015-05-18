@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'Boomboom';
+  src: url('../fonts/boomboom.eot');
+  src: url('../fonts/boomboom.eot?#iefix') format('embedded-opentype'), url('../fonts/boomboom.woff') format('woff'), url('../fonts/boomboom.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lobster';
+  src: url('../fonts/lobster.eot');
+  src: url('../fonts/lobster.eot?#iefix') format('embedded-opentype'), url('../fonts/lobster.woff') format('woff'), url('../fonts/lobster.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  /*body*/
+}
+html body {
+  position: relative;
+  /* Example of New */
+  background-image: -webkit-radial-gradient(right, circle farthest-side, #185589, #1d2831);
+  background-image: -o-radial-gradient(circle farthest-side at right, #185589, #1d2831);
+  background-image: radial-gradient(circle farthest-side at right, #185589, #1d2831);
+  /*wrapper*/
+}
+html body .container {
+  max-width: 960px;
+}
+html body h1 {
+  font-family: 'Boomboom';
+}
+html body h2 {
+  font-family: lobster;
+  text-align: center;
+}
+html body .left-img {
+  position: absolute;
+  top: 33%;
+  width: 20%;
+}
+html body .bulb {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url("../img/bulb-background.png") repeat;
+  opacity: 0.2;
+}
+html body header {
+  text-align: center;
+  padding-top: 80px;
+  /*navbar-nav*/
+}
+html body header .navbar {
+  margin-bottom: 5px;
+}
+html body header nav {
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  word-wrap: normal;
+}
+html body header nav li {
+  word-wrap: normal;
+  background-image: url(../img/nav-button-small.png);
+  /* image */
+  background-position: center;
+  /* center the image */
+  -webkit-background-size: cover;
+          background-size: cover;
+  /* cover the entire window */
+  border-radius: 6px;
+}
+html body header nav li:hover {
+  color: #ffffff;
+  background-image: url(../img/nav-button-active-small.png);
+}
+html body header nav a {
+  font-family: lobster;
+  font-size: 2em;
+  color: #ffffff;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  html body header nav li {
+    margin-bottom: 1px;
+  }
+}
+@media (max-width: 990px) {
+  html body header nav a {
+    font-size: 1.3em;
+  }
+}
+html body .wrapper {
+  background-color: rgba(255, 255, 255, 0.2);
+  /*top*/
+  /*middle*/
+}
+html body .wrapper .top {
+  padding-top: 20px;
+  /*/.slider*/
+}
+html body .wrapper .top img {
+  margin-bottom: 20px;
+}
+html body .wrapper .top .col-md-2 {
+  padding: 0;
+}
+html body .wrapper .top .left-banners {
+  padding-left: 20px;
+}
+@media (max-width: 990px) {
+  html body .wrapper .top .right-banners,
+  html body .wrapper .top .left-banners {
+    text-align: center;
+  }
+}
+html body .wrapper .top .slider {
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  display: -webkit-box;
+}
+html body .wrapper .top .slider .carousel {
+  margin: 0 auto;
+  height: 305px;
+}
+html body .wrapper .top .slider .carousel .carousel-inner {
+  height: 305px;
+  margin: 0 auto;
+}
+html body .wrapper .top .slider .carousel .carousel-indicators {
+  margin-left: 1%;
+  bottom: 85%;
+}
+html body .wrapper .top .slider .carousel .carousel-indicators li {
+  width: 17px;
+  height: 17px;
+  background-image: url("../img/slider-sprite.png");
+  background-position: -1px -2px;
+  border: none;
+}
+html body .wrapper .top .slider .carousel .carousel-indicators li.active {
+  background-position: -22px -2px;
+  background-color: transparent;
+  margin: 1px;
+}
+html body .wrapper .middle {
+  margin-bottom: 10px;
+  /*main*/
+  /*sidebar*/
+}
+html body .wrapper .middle main {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+html body .wrapper .middle main article {
+  display: block;
+  background-color: #ffffff;
+  padding: 25px 70px;
+}
+html body .wrapper .middle .sidebar {
+  padding: 0;
+  /*aside*/
+}
+html body .wrapper .middle .sidebar aside a {
+  margin-bottom: 20px;
+  display: block;
+}
+@media (max-width: 990px) {
+  html body .wrapper .middle .sidebar {
+    text-align: center;
+  }
+}
+html body .map {
+  width: 100%;
+  height: 450px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+html .footer .bottom-img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/*html*/
+/*# sourceMappingURL=main.css.map */

@@ -1,4 +1,116 @@
 //extendet for wordpress
 body{
-//test
+
+
+main{
+  .map{
+    margin-bottom: 3em;
+  }
+
+//FEEDBACK PAGE CONTACT
+//    NEED PLAGIN CONTACT FORM 7 http://contactform7.com/
+//  <div>
+//  [textarea your-message id:commentsText class:comm_entry placeholder "Повідомлення"]
+//  </div>
+//
+//  <div class="input_group">
+//
+//  [text* text-417 id:contactName class:contactName placeholder "ПІБ"]
+//
+//  [tel* tel-839 id:contactPhone class:contactPhone placeholder "Телефон"]
+//
+//  [email email-292 id:email class:email placeholder "Email"]
+//
+//  </div>
+//  <div class="submit">
+//  [submit class:s_feedback]
+//  </div>
+//    TO PHP ADD <?php echo do_shortcode('[YOURE FORM html_class="form form_feedback"]') ?>
+
+    .form_feedback{
+      min-width: 100%;
+      box-sizing: content-box;
+//      border: 1px solid #ff0000;
+      margin-bottom: 3em;
+      input{
+        min-width: 40%;
+      }
+      .comm_entry{
+        min-width: 100%;
+        display: block;
+        min-height: 250px;
+        padding: 5px;
+        background: url("../img/textarea_background.png");
+        border: 5px solid transparent;
+        -moz-border-image: -moz-linear-gradient(right, #a8cf45, #e6fab4, #a8cf45);
+        -webkit-border-image: -webkit-linear-gradient(right, #a8cf45, #e6fab4, #a8cf45);
+        border-image: linear-gradient(to right, #a8cf45, #e6fab4, #a8cf45);
+        border-image-slice: 1;
+      }
+      .input_group{
+        margin-top: 15px;
+        display: inline-block;
+        width: 58%;
+
+        input{
+          padding-left: 5px;
+          font-size: 1.0em;
+          line-height: 2em;
+        }
+        #contactName{
+          width: 100%;
+          margin-bottom: 5px;
+//          background: url("../img/name_background.png");
+
+        }
+        #contactName, #contactPhone, #email{
+          box-sizing: padding-box ;
+          background: url("../img/name_background.png");
+          border: 3px solid transparent;
+          -moz-border-image: -moz-linear-gradient(right, #a8cf45, #e6fab4, #a8cf45);
+          -webkit-border-image: -webkit-linear-gradient(right, #a8cf45, #e6fab4, #a8cf45);
+          border-image: linear-gradient(to right, #a8cf45, #e6fab4, #a8cf45);
+          border-image-slice: 1;
+        }
+        #contactPhone, #email{
+          width: 48%;
+        }
+
+        #contactPhone{
+          float: left;
+        }
+        #email{
+          float: right;
+        }
+
+      }
+      .submit{
+        margin-top: 15px;
+        float: right;
+        width: 40%;
+        height: 6.5em;
+        .s_feedback{
+          font-family: 'lobster';
+          font-size: 3em;
+          color: #ffffff;
+          border: none;
+          width: 100%;
+          height: 100%;
+          background: repeating-radial-gradient(ellipse at center, cover, #444444 0%,#999999 100%);
+          background: url("../img/button_send_1.jpg") no-repeat 0% 120%;
+          background-size: cover;
+          transition-duration: 0.5s;
+            &:focus,
+            &:hover{
+              background: url("../img/button_send_active1.jpg") no-repeat 0% 120%;
+              background-size: cover;
+              text-shadow: 2px 2px 2px #999999;
+              box-shadow: none;
+              outline: none;
+            }
+
+        }
+      }
+    }
+  } /*/main*/
 }

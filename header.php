@@ -40,7 +40,10 @@
     </div>    -->
         <div class="logo">
             <img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.png" class="img-responsive" alt="logo">
+            <div class="phone h_contact">(050) 52 33 636</div>
+            <div class="mail h_contact">info@capitoshka.cv.ua</div>
         </div>
+
 
         <nav id="site-navigation"  class="navbar navbar-default" role="navigation">
             <?php /* Primary navigation */

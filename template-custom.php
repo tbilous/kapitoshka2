@@ -24,21 +24,27 @@ get_header();?>
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
                                 <img class="first-slide img-responsive" src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider1.jpg" alt="First slide" />
+                                <div class="text-block"><p>Розважальні программи</p> <p class="second_line">для Ваших непосид...</p></div>
                             </div>
                             <div class="item">
                                 <img class="second-slide img-responsive" src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider2.jpg" alt="Second slide" />
+                                <div class="text-block"><p>Розважальні программи</p> <p class="second_line">для Ваших непосид...</p></div>
                             </div>
                             <div class="item">
                                 <img class="second-slide img-responsive" src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider3.jpg" alt="Second slide" />
+                                <div class="text-block"><p>Розважальні программи</p> <p class="second_line">для Ваших непосид...</p></div>
                             </div>
                             <div class="item">
                                 <img class="second-slide img-responsive" src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider4.jpg" alt="Second slide" />
+                                <div class="text-block"><p>Розважальні программи</p> <p class="second_line">для Ваших непосид...</p></div>
                             </div>
                             <div class="item">
                                 <img class="second-slide img-responsive" src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider5.jpg" alt="Second slide" />
+                                <div class="text-block"><p>Розважальні программи</p> <p class="second_line">для Ваших непосид...</p></div>
                             </div>
                             <div class="item">
                                 <img class="second-slide img-responsive" src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider6.jpg" alt="Second slide" />
+                                <div class="text-block"><p>Розважальні программи</p> <p class="second_line">для Ваших непосид...</p></div>
                             </div>
                         </div>
                         <ol class="carousel-indicators">
@@ -79,7 +85,18 @@ get_header();?>
 
 
 
-                    <div class="social"></div>
+                    <div class="social">
+                        <script type="text/javascript">(function() {
+                                if (window.pluso)if (typeof window.pluso.start == "function") return;
+                                if (window.ifpluso==undefined) { window.ifpluso = 1;
+                                    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                                    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                                    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                                    var h=d[g]('body')[0];
+                                    h.appendChild(s);
+                                }})();</script>
+                        <div class="pluso" data-background="#ebebeb" data-options="big,square,line,horizontal,counter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print"></div>
+                    </div>
                     <div id="social" class="widget-area" role="complementary">
                         <?php dynamic_sidebar( 'sidebar-2' ); ?>
                     </div>

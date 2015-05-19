@@ -66,7 +66,68 @@ html {
       text-align: center;
       padding-top: 80px;
       margin-bottom: -15;
+        .h_contact{
+          position: absolute;
+          color: #ffffff;
+          font-size: 1.5em;
+          z-index: 999;
+          font-family: 'Helvetica Neue';
+          top:16em;
+          text-shadow: 2px 2px 2px #999999;
 
+          &.phone{
+            right: 18%;
+          }
+          &.phone:before{
+            content: url("../img/phone_header.png");
+            position: relative;
+            top: 5px;
+            right: 5px;
+          }
+          &.mail{
+            left: 18%;
+          }
+          &.mail:before{
+            content: url("../img/mail_header.png");
+            position: relative;
+            top: 5px;
+            right: 5px;
+          }
+        }
+      @media (max-width: 990px ) {
+        .h_contact{
+          top:18em;
+          font-size: 1.1em;
+        }
+        }
+      @media (max-width: 710px ) {
+        .h_contact{
+          font-size: 1em;
+          top:18em;
+          &.phone{
+            right: 13%;
+          }
+          &.mail{
+            left: 13%;
+          }
+        }
+      }
+      @media (max-width: 600px ) {
+        .h_contact{
+          top:15em;
+          &.phone{
+            right: 8%;
+          }
+          &.mail{
+            left: 8%;
+          }
+        }
+      }
+      @media (max-width: 480px ) {
+        .h_contact{
+          top:13em;
+        }
+      }
 
       nav {
         margin: 0 auto;
@@ -113,10 +174,6 @@ html {
           margin-bottom: 20px;
         }
 
-        //      [class^="col-"] {
-        //        border: 1px solid #ff0000;
-        //
-        //      }
         .col-md-2 {
           padding: 0;
         }
@@ -141,6 +198,25 @@ html {
             .carousel-inner {
               height: 305px;
               margin: 0 auto;
+                .text-block{
+                  width: 70%;
+                  height: 20%;
+                  position: absolute;
+                  top: 40%;
+                  padding: 1%;
+                  background: rgba(98,174,236, 0.8);
+                  font-family: 'lobster';
+                  color: #ffffff;
+                  font-size: 1.5em;
+                  .second_line{
+                    text-align: right;
+                  }
+                }
+              @media (max-width: 640px ) {
+                .text-block{
+                  font-size: 1em;
+                }
+              }
             }
             .carousel-indicators {
               margin-left: 1%;
@@ -165,7 +241,6 @@ html {
       }
       /*top*/
       .middle {
-//        margin-bottom: 10px;
         main {
           padding-left: 5px;
           padding-right: 5px;
@@ -173,6 +248,9 @@ html {
             display: block;
             background-color: #ffffff;
             padding: 25px 70px;
+              &.addon{
+                padding: 5px 5px 25px;
+              }
           }
         }
         /*main*/
@@ -217,7 +295,6 @@ html {
       height: 450px;
       margin: 0 auto;
       padding: 0 15px;
-      //    z-index: 999;
     }
   }
   /*body*/

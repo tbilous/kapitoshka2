@@ -50,6 +50,7 @@ function kapitoshka2_setup() {
     register_nav_menus( array(
         'primary' => __( 'Меню в шапке', 'kapitoshka2' ),
         'footer_menu' => __( 'Меню в подвале', 'kapitoshka2' ),
+        'side_menu' => __( 'Бокове меню', 'kapitoshka2' )
     ) );
 
 
@@ -179,14 +180,35 @@ register_nav_menus( array(
 
 require_once('lib/wp_bootstrap_navwalker.php');
 
+// add jQuery
+//function my_scripts_method() {
+//    // отменяем зарегистрированный jQuery
+//    // вместо "jquery-core" просто "jquery", чтобы отключить jquery-migrate
+//    wp_deregister_script( 'jquery-core' );
+//    wp_register_script( 'jquery-core', '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js');
+//    wp_enqueue_script( 'jquery' );
+//}
+//add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
+
+function my_scripts_method() {
+    // получаем версию jQuery
+    wp_enqueue_script( 'jquery' );
+    $wp_jquery_ver = $GLOBALS['wp_scripts']->registered['jquery']->ver; // для версий WP меньше 3.6 'jquery' меняем на 'jquery-core'
+    $jquery_ver = $wp_jquery_ver == '' ? '1.11.0' : $wp_jquery_ver;
+
+    wp_deregister_script( 'jquery-core' );
+    wp_register_script( 'jquery-core', '//ajax.googleapis.com/ajax/libs/jquery/'. $jquery_ver .'/jquery.min.js' );
+    wp_enqueue_script( 'jquery' );
+}
+add_action( 'wp_enqueue_scripts', 'my_scripts_method', 99 );
+
+
 function my_theme_load_resources() {
     $theme_uri = get_template_directory_uri();
 
 
       wp_register_style('my_bootstrap_style', $theme_uri.'/assets/css/styles.css', false, '0.1');
       wp_enqueue_style('my_bootstrap_style');
-
-
 
     wp_register_script('my_theme_functions', $theme_uri.'/assets/js/vendor/bootstrap.min.js', array('jquery') );
     wp_enqueue_script('my_theme_functions');
@@ -196,14 +218,6 @@ function my_theme_load_resources() {
 
     wp_register_script('my_them_plugins_functions', $theme_uri.'/assets/js/plugins.js', array('jquery') );
     wp_enqueue_script('my_them_plugins_functions');
-
-//    wp_register_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBuU_0_uLMnFM-2oWod_fzC0atPZj7dHlU&sensor=false');
-//    wp_enqueue_script('google-maps');
-//
-//    wp_register_script('google-jsapi','https://www.google.com/jsapi');
-//    wp_enqueue_script('google-jsapi');
-
-
 
 
     //Если хотим подключить стиль или скрипт только на определённых страницах
@@ -215,33 +229,17 @@ function my_theme_load_resources() {
 add_action('wp_enqueue_scripts', 'my_theme_load_resources');
 
 
-//
-//wp_register_script('custom-js',get_stylesheet_directory_uri().'/assets/js/plugins.js',array(),NULL,true);
-//wp_enqueue_script('custom-js');
-//
-//$wnm_custom = array( 'stylesheet_directory_uri' => get_stylesheet_directory_uri() );
-//wp_localize_script( 'custom-js', 'directory_uri', $wnm_custom );
 wp_register_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBuU_0_uLMnFM-2oWod_fzC0atPZj7dHlU&sensor=false');
 wp_enqueue_script('google-maps');
+
 wp_register_script('google-jsapi','https://www.google.com/jsapi');
 wp_enqueue_script('google-jsapi');
-
-//wp_register_script('custom-js',get_stylesheet_directory_uri().'/assets/js/plugins.js',array(),NULL,true);
-//wp_enqueue_script('custom-js');
-//
-//$wnm_custom = array( 'stylesheet_directory_uri' => get_stylesheet_directory_uri() );
-//wp_localize_script( 'custom-js', 'directory_uri', $wnm_custom );
 
 function localize_vars() {
     return array(
         'stylesheet_directory' => get_stylesheet_directory_uri()
     );
 }
-
-wp_enqueue_script( 'my_script', get_stylesheet_directory_uri().( '/assets/js/plugins.js' ), array( 'jquery' ) );
-wp_localize_script( 'my_script', 'blabla', localize_vars() );
-
-
 
 
 // Register Custom Navigation Walker

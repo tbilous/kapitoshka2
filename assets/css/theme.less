@@ -1,6 +1,72 @@
 //extendet for wordpress
 body{
+  .dropses{
 
+    position: absolute;
+    top: 10%;
+    display: block;
+
+
+    position:absolute;
+    left:0;
+    right:0;
+
+    margin:auto;
+
+  }
+//  SIDE MENU
+  .side-navigation{
+    img{
+      margin: 5px 5px 0;
+    }
+    background-color: rgba(114, 146, 186, 0.7);
+    right: 1px;
+    top:15%;
+    &.default{
+      display: none;
+    }
+    &.fix{
+      position: fixed;
+      display: block;
+      margin-top: 150px;
+    }
+
+    ul{
+      margin: 5px 5px 0;
+      padding: 0;
+      li{
+        list-style-type: none;
+        background: linear-gradient(to right, #88b65c 10%, #afc755 100%); /* W3C */
+        padding: 5px;
+        margin-bottom: 5px;
+        &:hover{
+          background: linear-gradient(to right, #495e88 10%, #45a1d0 100%); /* W3C */
+        }
+        a{
+          font-family: lobster;
+          font-size: 1.2em;
+          color: #ffffff;
+          text-decoration: none;
+          display: block;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+        }
+      }
+    }
+
+  } /*/.side-navigation*/
+
+//BUTTON UP
+  .up{
+    display: none;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom:5%;
+    left:1%;
+    background: url("../img/scroll_key.png") center no-repeat;
+  }
 
 main{
   .map{

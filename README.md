@@ -43,3 +43,24 @@ Then, update the stylesheet header in `style.css` and the links in `footer.php` 
 Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
 
 Good luck!
+added Bilous Taras
+
+FEEDBACK PAGE CONTACT
+    NEED PLAGIN CONTACT FORM 7 http://contactform7.com/
+  <div>
+  [textarea your-message id:commentsText class:comm_entry placeholder "Повідомлення"]
+  </div>
+
+  <div class="input_group">
+
+  [text* text-417 id:contactName class:contactName placeholder "ПІБ"]
+
+  [tel* tel-839 id:contactPhone class:contactPhone placeholder "Телефон"]
+
+  [email email-292 id:email class:email placeholder "Email"]
+
+  </div>
+  <div class="submit">
+  [submit class:s_feedback]
+  </div>
+    TO PHP ADD <?php echo do_shortcode('[YOURE FORM html_class="form form_feedback"]') ?>

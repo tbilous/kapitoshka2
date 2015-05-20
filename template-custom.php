@@ -68,7 +68,7 @@ get_header();?>
         <div class="row">
             <div class="col-md-10 col-sm-12">
                 <main>
-
+<article>
 
                     <?php while ( have_posts() ) : the_post(); ?>
 
@@ -82,21 +82,21 @@ get_header();?>
                         ?>
 
                     <?php endwhile; // end of the loop. ?>
+<!--    <div class="social">-->
+<!--        <script type="text/javascript">(function() {-->
+<!--                if (window.pluso)if (typeof window.pluso.start == "function") return;-->
+<!--                if (window.ifpluso==undefined) { window.ifpluso = 1;-->
+<!--                    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';-->
+<!--                    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;-->
+<!--                    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';-->
+<!--                    var h=d[g]('body')[0];-->
+<!--                    h.appendChild(s);-->
+<!--                }})();</script>-->
+<!--        <div class="pluso" data-background="#ebebeb" data-options="big,square,line,horizontal,counter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print"></div>-->
+<!--    </div>-->
 
+</article>
 
-
-                    <div class="social">
-                        <script type="text/javascript">(function() {
-                                if (window.pluso)if (typeof window.pluso.start == "function") return;
-                                if (window.ifpluso==undefined) { window.ifpluso = 1;
-                                    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-                                    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
-                                    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
-                                    var h=d[g]('body')[0];
-                                    h.appendChild(s);
-                                }})();</script>
-                        <div class="pluso" data-background="#ebebeb" data-options="big,square,line,horizontal,counter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print"></div>
-                    </div>
                     <div id="social" class="widget-area" role="complementary">
                         <?php dynamic_sidebar( 'sidebar-2' ); ?>
                     </div>
@@ -111,18 +111,17 @@ get_header();?>
 
             </aside>
 
-
             </div>
         </div> <!--row-->
     </div>  <!--middle-->
 </div>  <!--wrapper-->
 
+<img class="bottom-img" src="<?php bloginfo('template_directory'); ?>/assets/img/bottom-img.png" alt="garden" class="bottom-flower img-responsive">
 
-<?php //get_template_part('templates/footer'); ?>
 
 
-<!--<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>      -->
-</body>
+
+<!--</body>-->
 <?php get_footer(); ?>
 
 

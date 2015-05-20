@@ -11,7 +11,7 @@
  */
 
 get_header(); ?>
-
+<!--<h1>PAGE.PHP</h1>-->
 <div class="middle row">
     <div id="primary" class="col-md-10 col-sm-12 content-area">
 		<main id="main" class="site-main" role="main">
@@ -31,6 +31,18 @@ get_header(); ?>
         <div id="social" class="widget-area" role="complementary">
             <?php dynamic_sidebar( 'sidebar-2' ); ?>
         </div>
+            <div class="social">
+                <script type="text/javascript">(function() {
+                        if (window.pluso)if (typeof window.pluso.start == "function") return;
+                        if (window.ifpluso==undefined) { window.ifpluso = 1;
+                            var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                            s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                            s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                            var h=d[g]('body')[0];
+                            h.appendChild(s);
+                        }})();</script>
+                <div class="pluso" data-background="#ebebeb" data-options="big,square,line,horizontal,counter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print"></div>
+            </div>
 
             </article><!-- #post-## -->
 		</main><!-- #main -->
@@ -38,6 +50,9 @@ get_header(); ?>
 
 <?php get_sidebar(); ?>
 
-</div> <!--/row-->
-
+        </div>
+    </div> <!--row-->
+</div>  <!--middle-->
+</div>  <!--wrapper-->
+<img class="bottom-img" src="<?php bloginfo('template_directory'); ?>/assets/img/bottom-img.png" alt="garden" class="bottom-flower img-responsive">
 <?php get_footer(); ?>

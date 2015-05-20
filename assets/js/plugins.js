@@ -24,45 +24,49 @@
 // Place any jQuery/helper plugins in here.
 
 
-// Карта Google с кастомным маркером
-var templateUrl = blabla.stylesheet_directory;
-
-var point = templateUrl+'/assets/img/map_point.png';
-
-
-function initialize() {
-    var latlng = new google.maps.LatLng(48.268077, 25.942986);
-    var settings = {
-        zoom: 18,
-        center: latlng,
-        disableDefaultUI: true,
-        mapTypeId: google.maps.MapTypeId.ROADMAP};
-    var map = new google.maps.Map(document.getElementById("map"), settings);
-    var companyImage = new google.maps.MarkerImage(templateUrl+'/assets/img/map_point.png',
-        new google.maps.Size(100,50),
-        new google.maps.Point(0,0),
-        new google.maps.Point(50,50));
-    var companyShadow = new google.maps.MarkerImage(templateUrl+'/assets/img/shadow.png',
-        new google.maps.Size(130,50),
-        new google.maps.Point(0,0),
-        new google.maps.Point(65, 50));
-    var companyPos = new google.maps.LatLng(48.268, 25.9432);
-    var companyMarker = new google.maps.Marker({
-        position: companyPos,
-        map: map,
-        icon: companyImage,
-        shadow: companyShadow,
-        title:"Капітошка",
-        zIndex: 3});
-}
-
 $(window).bind("load", function() { //wait for fool load window
 
     $(document).ready(function () {
-        initialize();
-    });
 
-    $(document).ready(function(){
+        //var $menu = $("#side-navigation");
+        //
+        //$(window).scroll(function(){
+        //    if ( $(this).scrollTop() > 100 && $menu.hasClass("default") ){
+        //        $menu.removeClass("default").addClass("fixed");
+        //    } else if($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
+        //        $menu.removeClass("fixed").addClass("default");
+        //    }
+        //});//scroll
+        //
+        //side menu
+        var h_hght = 500; // высота шапки
+        var h_mrg = 0;     // отступ когда шапка уже не видна
+
+            jQuery(window).scroll(function(){
+                var top = jQuery(this).scrollTop();
+                var elem = jQuery('#side-navigation');
+                if (top+h_mrg < h_hght) {
+                    elem.css('top', (h_hght-top));
+                    elem.removeClass('fix');
+                } else {
+                    elem.css('top', h_mrg);
+                    elem.addClass('fix');
+                }
+            });
+
+        var toTop = $('#up');
+        toTop.hide();
+
+
+        $(window).scroll(function(){
+            if($(window).scrollTop() > 100){
+                toTop.fadeIn(300);
+            }
+            if($(window).scrollTop() < 100){
+                toTop.fadeOut(300);
+            }
+        });
+
 //Обработка нажатия на кнопку "Вверх"
         $("#up").click(function(){
 //Необходимо прокрутить в начало страницы
@@ -79,8 +83,10 @@ $(window).bind("load", function() { //wait for fool load window
             var scrollTime=(height-curPos)/1.73;
             $("body,html").animate({"scrollTop":height},scrollTime);
         });
-    });
 
 
+
+
+    }); /*end ready function*/
 });//end of wait for fool load window
 

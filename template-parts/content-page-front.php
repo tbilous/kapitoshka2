@@ -22,3 +22,4 @@
 		<?php edit_post_link( esc_html__( 'Редактувати', 'kapitoshka2' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 <!--</article>-->
+

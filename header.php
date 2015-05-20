@@ -16,7 +16,7 @@
 
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?> onload="initialize()" >
+<body <?php body_class(); ?> >
 <!--[if lt IE 8]>
 <div class="alert alert-warning">
     <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'roots'); ?>
@@ -28,6 +28,9 @@
 </div>
 
 <div class="bulb"></div>
+
+<img src="<?php bloginfo('template_directory'); ?>/assets/img/dropsanddrops.png" class="dropses img-responsive">
+
 <header id="masthead" role="banner">
     <div class="container">
         <!--   <div class="navbar-header">
@@ -59,5 +62,7 @@
         </nav>
     </div>
 </header>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 
 <div class="wrapper container">

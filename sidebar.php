@@ -13,7 +13,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
     <aside>
     <ul>
         <li><img src="<?php bloginfo('template_directory'); ?>/assets/img/wifi.jpg" alt="wifi" width="135px"></li>
-        <li><img src="<?php bloginfo('template_directory'); ?>/assets/img/pizza" alt="pizza" width="135px"></li>
+        <li><img src="<?php bloginfo('template_directory'); ?>/assets/img/pizza.jpg" alt="pizza" width="135px"></li>
         <li><img src="<?php bloginfo('template_directory'); ?>/assets/img/kudz.jpg" alt="kudz" width="135px"></li>
         <li><img src="<?php bloginfo('template_directory'); ?>/assets/img/offer_pregnat.jpg" alt="pregnat_offers" width="135px;"></li>
         <li><a href="javascript:void(0)">

@@ -29,7 +29,7 @@
 
 <div class="bulb"></div>
 
-<img src="<?php bloginfo('template_directory'); ?>/assets/img/dropsanddrops.png" class="dropses img-responsive">
+<!--<img src="--><?php //bloginfo('template_directory'); ?><!--/assets/img/dropsanddrops.png" class="dropses img-responsive">-->
 
 <header id="masthead" role="banner">
     <div class="container">

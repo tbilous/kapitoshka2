@@ -16,7 +16,7 @@ get_header();?>
         <div class="top">
             <div class="col-md-2 col-sm-12 left-banners">
                 <img src="<?php bloginfo('template_directory'); ?>/assets/img/wifi.jpg" alt="wifi" width="135px">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/pizza" alt="pizza" width="135px">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/img/pizza.jpg" alt="pizza" width="135px">
             </div>
             <div class="col-md-8 col-sm-12 col-xs-12 parent_slider">
                 <div class="slider">

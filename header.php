@@ -42,7 +42,7 @@
       </button>
     </div>    -->
         <div class="logo">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.png" class="img-responsive" alt="logo">
+            <img class="logo_img" src="<?php bloginfo('template_directory'); ?>/assets/img/logo_resample.png" alt="logo">
             <div class="phone h_contact">(050) 52 33 636</div>
             <div class="mail h_contact">info@capitoshka.cv.ua</div>
         </div>

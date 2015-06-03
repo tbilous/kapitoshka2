@@ -82,7 +82,7 @@ linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.97) 1%,rgb
 
       text-align: center;
       padding-top: 80px;
-      margin-bottom: -15;
+//      margin-bottom: -15px;
       .logo{
         text-align: center;
         .logo_img {
@@ -166,7 +166,7 @@ linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.97) 1%,rgb
         display: inline-block;
         text-align: center;
         word-wrap: normal;
-        margin-bottom: -15;
+        margin-bottom: -15px;
         li {
           word-wrap: normal;
           background-image: url(../img/nav-button-small.png); /* image */
@@ -225,13 +225,18 @@ linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.97) 1%,rgb
             text-align: center;
           }
         }
+        @media (max-width: 990px ) {
+          .slider {
+            margin-bottom: 20px;
+          }
+
+        }
         .slider {
           -webkit-box-align: center;
           -webkit-box-pack: center;
           display: -webkit-box;
 
           .carousel {
-
             margin: 0 auto;
             height: 305px;
 
@@ -281,7 +286,11 @@ linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.97) 1%,rgb
       }
       /*top*/
       .middle {
-
+        @media (max-width: 990px)  {
+          main {
+            margin-bottom: 20px;
+          }
+        }
         main {
           padding-left: 5px;
           padding-right: 5px;

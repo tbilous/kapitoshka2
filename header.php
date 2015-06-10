@@ -11,7 +11,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="http://gmpg.org/xfn/11">
+<!--    <link rel="profile" href="http://gmpg.org/xfn/11">-->
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
     <?php wp_head(); ?>
@@ -43,8 +43,8 @@
     </div>    -->
         <div class="logo">
             <img class="logo_img" src="<?php bloginfo('template_directory'); ?>/assets/img/logo_resample.png" alt="logo">
-            <div class="phone h_contact">(050) 52 33 636</div>
-            <div class="mail h_contact">info@capitoshka.cv.ua</div>
+            <div class="phone h_contact"><a href="http://kapitoshka.biz.ua/contacts/">(050) 52 33 636</a></div>
+            <div class="mail h_contact"><a href="http://kapitoshka.biz.ua/contacts/">info@capitoshka.cv.ua</a></div>
         </div>
 
 
@@ -62,7 +62,7 @@
         </nav>
     </div>
 </header>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
 
 
 <div class="wrapper container">

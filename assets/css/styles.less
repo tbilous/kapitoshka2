@@ -27,7 +27,9 @@ html {
 
   body {
     .container {
-      max-width: 960px
+      max-width: 960px;
+      min-width: 385px;
+
     }
     position: relative;
 
@@ -109,12 +111,16 @@ linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.97) 1%,rgb
       }
         .h_contact{
           position: absolute;
-          color: #ffffff;
+//          color: #ffffff;
           font-size: 1.5em;
           z-index: 3;
           font-family: 'Helvetica Neue';
           top:16em;
           text-shadow: 2px 2px 2px #999999;
+          a{
+            text-decoration: none;
+            color: @gray-lighter;
+          }
 
           &.phone{
             right: 18%;
@@ -224,9 +230,28 @@ linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.97) 1%,rgb
           .right-banners, .left-banners {
             text-align: center;
           }
+          .right-banners {
+            padding-top: 20px;
+          }
         }
+        @media (max-width: 770px ) {
+          .right-banners {
+            img{
+              margin-top: 20px;
+            }
+          }
+        }
+        @media (max-width: 490px ) {
+          .right-banners {
+            img{
+              margin-top: 0px;
+            }
+          }
+        }
+
+
         @media (max-width: 990px ) {
-          .slider {
+          .carousel {
             margin-bottom: 20px;
           }
 
@@ -235,19 +260,22 @@ linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.97) 1%,rgb
           -webkit-box-align: center;
           -webkit-box-pack: center;
           display: -webkit-box;
+          margin-bottom: 0px;
 
           .carousel {
             margin: 0 auto;
-            height: 305px;
+            max-height: 305px;
 
             .carousel-inner {
-              height: 305px;
+              max-height: 305px;
               margin: 0 auto;
                 .text-block{
                   width: 70%;
-                  height: 20%;
+//                  height: 20%;
+                  height: 80px;
                   position: absolute;
-                  top: 40%;
+                  top: 120px;
+//                  display: block;
                   padding: 1%;
                   background: rgba(98,174,236, 0.8);
                   font-family: 'lobster';
@@ -260,6 +288,8 @@ linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.97) 1%,rgb
               @media (max-width: 640px ) {
                 .text-block{
                   font-size: 1em;
+                  top:40px;
+                  height: 60px
                 }
               }
             }

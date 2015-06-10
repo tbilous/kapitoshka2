@@ -23,29 +23,29 @@ get_header();?>
                     <div id="Carousel" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img class="first-slide img-responsive" src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider1.jpg" alt="First slide" />
+                                <img class="first-slide " src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider1.jpg" alt="First slide" />
                                 <div class="text-block"><p>Розважальні программи</p> <p class="second_line">для Ваших непосид...</p></div>
                             </div>
                             <div class="item">
-                                <img class="second-slide img-responsive" src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider2.jpg" alt="Second slide" />
+                                <img class="second-slide " src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider2.jpg" alt="Second slide" />
                                 <div class="text-block"><p>Розважальні программи</p> <p class="second_line">для Ваших непосид...</p></div>
                             </div>
                             <div class="item">
-                                <img class="second-slide img-responsive" src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider3.jpg" alt="Second slide" />
+                                <img class="second-slide " src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider3.jpg" alt="Second slide" />
                                 <div class="text-block"><p>Розважальні программи</p> <p class="second_line">для Ваших непосид...</p></div>
                             </div>
                             <div class="item">
-                                <img class="second-slide img-responsive" src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider4.jpg" alt="Second slide" />
+                                <img class="second-slide " src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider4.jpg" alt="Second slide" />
                                 <div class="text-block"><p>Розважальні программи</p> <p class="second_line">для Ваших непосид...</p></div>
                             </div>
                             <div class="item">
-                                <img class="second-slide img-responsive" src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider5.jpg" alt="Second slide" />
+                                <img class="second-slide " src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider5.jpg" alt="Second slide" />
                                 <div class="text-block"><p>Розважальні программи</p> <p class="second_line">для Ваших непосид...</p></div>
                             </div>
-                            <div class="item">
-                                <img class="second-slide img-responsive" src="<?php bloginfo('template_directory'); ?>/assets/img/slider/slider6.jpg" alt="Second slide" />
+<!--                            <div class="item">
+                                <img class="second-slide " src="<?php /*bloginfo('template_directory'); */?>/assets/img/slider/slider6.jpg" alt="Second slide" />
                                 <div class="text-block"><p>Розважальні программи</p> <p class="second_line">для Ваших непосид...</p></div>
-                            </div>
+                            </div>-->
                         </div>
                         <ol class="carousel-indicators">
                             <li data-target="#Carousel" data-slide-to="0" class="active"></li>
@@ -53,7 +53,7 @@ get_header();?>
                             <li data-target="#Carousel" data-slide-to="2"></li>
                             <li data-target="#Carousel" data-slide-to="3"></li>
                             <li data-target="#Carousel" data-slide-to="4"></li>
-                            <li data-target="#Carousel" data-slide-to="5"></li>
+<!--                            <li data-target="#Carousel" data-slide-to="5"></li>-->
                         </ol>
                     </div><!-- /.carousel -->
                 </div> <!--/.slider-->
